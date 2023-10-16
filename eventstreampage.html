@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports ChAMP</title>
+    <link rel="icon" type="images/x-icon" href="img/whistlelogo.png">
+    <script src="https://kit.fontawesome.com/2091df493b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="eventstreampage.css">
+</head>
+<body>
+    <div class="navbar">
+        <img src="img/logo.png" alt="Sports ChAMP Logo" width="200" height="auto">
+        <div class="search-bar-container">
+            <form class="search-bar" method="get">
+                <input type="text" class="search-input">
+                <button type="submit" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+        <ul>
+            <li>
+                <div class="user-dropdown">
+                    <button type="button" class="user-icon" onclick="open_panel()"><i class="fa-solid fa-circle-user"></i></button>
+                    <div class="user-profile" id="sidepanel">
+                        <span onclick="close_panel()" style="font-size:30px;cursor:pointer;color: grey;" class="close_btn">&times;</span>
+                        <section class="profile-pic">
+                            <div class="picture"><i class="fa-solid fa-circle-user"></i><i class="fa-solid fa-camera"></i></div>
+                            <span class="username"><p>username</p><i class="fa-solid fa-pencil"></i></span>
+                        </section>
+                        <section class="user-info">
+                            <ul>
+                                <li>First Name <i class="fa-solid fa-pencil"></i></li>
+                                <li>Last Name<i class="fa-solid fa-pencil"></i></li>
+                                <li>Address<i class="fa-solid fa-pencil"></i></li>
+                                <li>Contact Number<i class="fa-solid fa-pencil"></i></li>
+                                <li>Email<i class="fa-solid fa-pencil"></i></li>
+                                <li>User Type<i class="fa-solid fa-pencil"></i></li>
+                            </ul>
+                            <button type="button" class="logout-button">Log out</button>
+                        </section>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="navigation-menu">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Edit Details</a></li>
+                <li id="active"><a href="#">Streams</a></li>
+                <li><a href="#">Personnel</a></li>
+                <li><a href="#">Events</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <img src="img/design.png" alt="Background Image" class="background-image">
+    </div>
+
+    <div class="centered-box">
+        <div class="banner">
+            <img src="img/banner.jpg" alt="Banner Image" class="banner-image">
+        </div>
+        <div class="event-info-box">
+            <div class="event-details">
+                <h2>Event Name</h2>
+                <p>Short description of the event.</p>
+                <p>Date and Time: </p>
+            </div>
+            <div class="event-details-right">
+                <p><strong>Location:</strong> Event Location</p>
+                <p><strong>Organizer:</strong> Event Organizer</p>
+            </div>
+        </div>
+        <div class="tournament-box">
+            <div class="square-box">
+                <video width="100%" height="100%" controls>
+                    <source src="your-video.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="square-box stream-box">
+                <h3>Stream Information</h3>
+                <form id="stream-info-form">
+                    <div class="stream-title">
+                        <label for="stream-title">Stream Title:</label>
+                        <input type="text" id="stream-title" name="stream-title">
+                    </div>
+                    <div class="embed-code">
+                        <label for="embed-code">Embed Code:</label>
+                        <input type="text" id="embed-code" name="embed-code">
+                    </div>
+                    <div class="options">
+                        <input type="checkbox" id="priority-stream" name="priority-stream">
+                        <label for="priority-stream">Set as Priority</label>
+                    </div>
+                    <div class="buttons">
+                        <button class="cancel-stream-button">Cancel</button>
+                        <button class="continue-stream-button">Continue</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
